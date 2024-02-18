@@ -46,7 +46,7 @@ test('create ask',
         await page.getByRole('button', {name: 'Create Asks'}).click();
         await page.locator('div').filter({hasText: /^Hi$/}).nth(1).click();
         await page.getByRole('textbox').first().press('Meta+a');
-        const greeting = await page.getByRole('textbox').first().fill(Greetings);
+        await page.getByRole('textbox').first().fill(Greetings);
         await page.getByLabel('as the QA').click();
         await page.getByLabel('as the QA').press('Meta+a');
         await page.getByLabel('as the QA').fill(Roles);
